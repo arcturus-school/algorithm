@@ -26,6 +26,8 @@
     <ClCompile Include="lab04.cpp" />
     <ClCompile Include="lab05.cpp" />
     <ClCompile Include="lab06.cpp" />
+    <ClCompile Include="lab07.cpp" />
+    <ClCompile Include="lab08.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lab.h" />

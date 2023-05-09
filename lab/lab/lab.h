@@ -19,3 +19,9 @@ void lab05();
 
 // 矩阵连乘
 void lab06();
+
+// 最长有效括号子串
+void lab07();
+
+// 星际穿越
+void lab08();
