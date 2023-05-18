@@ -25,3 +25,9 @@ void lab07();
 
 // 星际穿越
 void lab08();
+
+// 盛最多水的容器
+void lab09();
+
+// 最小延迟调度
+void lab10();

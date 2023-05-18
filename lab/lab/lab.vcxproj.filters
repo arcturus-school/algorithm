@@ -42,6 +42,12 @@
     <ClCompile Include="lab08.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="lab09.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lab10.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lab.h">

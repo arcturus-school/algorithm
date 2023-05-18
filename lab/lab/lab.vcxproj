@@ -28,6 +28,8 @@
     <ClCompile Include="lab06.cpp" />
     <ClCompile Include="lab07.cpp" />
     <ClCompile Include="lab08.cpp" />
+    <ClCompile Include="lab09.cpp" />
+    <ClCompile Include="lab10.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lab.h" />
