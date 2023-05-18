@@ -24,6 +24,12 @@
 
 - [lab08](./lab/lab/lab08.cpp) 最短跳跃次数
 
+### 贪心算法
+
+- [lab09](/lab/lab/lab09.cpp) 最大容积
+
+- [lab10](./lab/lab/lab10.cpp) 最小延迟调度
+
 ## 学习笔记
 
 点击查看[掘金专栏](https://juejin.cn/column/7208817904547446840)
