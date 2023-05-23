@@ -30,11 +30,16 @@
     <ClCompile Include="lab08.cpp" />
     <ClCompile Include="lab09.cpp" />
     <ClCompile Include="lab10.cpp" />
+    <ClCompile Include="lab11.cpp" />
+    <ClCompile Include="lab12.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lab.h" />
     <ClInclude Include="output.h" />
     <ClInclude Include="stdc++.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
