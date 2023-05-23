@@ -1,4 +1,4 @@
-#include "lab.h"
+﻿#include "lab.h"
 
 double getPower(double x, int p) {
     if (p == 0) return 1.0;

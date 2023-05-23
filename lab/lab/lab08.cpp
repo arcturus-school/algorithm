@@ -1,9 +1,9 @@
-#include "lab.h"
+ï»¿#include "lab.h"
 
-// Ì°ĞÄËã·¨
+// è´ªå¿ƒç®—æ³•
 int min_trans_num_greedy(int n, std::vector<int>& dis) {
-    int cur = 0;  // µ±Ç°Î»ÖÃ
-    int jump = 1; // ´«ËÍ´ÎÊı(ÖÁÉÙ´«ËÍ 1 ´Î)
+    int cur = 0;  // å½“å‰ä½ç½®
+    int jump = 1; // ä¼ é€æ¬¡æ•°(è‡³å°‘ä¼ é€ 1 æ¬¡)
 
     while (true) {
         if (cur + dis[cur] >= n) {
@@ -12,7 +12,7 @@ int min_trans_num_greedy(int n, std::vector<int>& dis) {
 
         int max = cur + 1;
 
-        // ÔÚ±¾´ÎÄÜ´«ËÍµ½µÄÎ»ÖÃÄÚ, ËÑË÷ÔÙ´«ËÍÒ»´ÎÄÜµ½µÄ×îÔ¶Î»ÖÃ
+        // åœ¨æœ¬æ¬¡èƒ½ä¼ é€åˆ°çš„ä½ç½®å†…, æœç´¢å†ä¼ é€ä¸€æ¬¡èƒ½åˆ°çš„æœ€è¿œä½ç½®
         for (int i = cur + 2; i <= cur + dis[cur]; i++) {
             if (i + dis[i] > max + dis[max]) {
                 max = i;
@@ -24,7 +24,7 @@ int min_trans_num_greedy(int n, std::vector<int>& dis) {
     }   
 }
 
-// ¶¯Ì¬¹æ»®
+// åŠ¨æ€è§„åˆ’
 int min_trans_num_dp(int n, std::vector<int>& dis) {
     std::vector<int> dp(n, 0);
 
@@ -46,10 +46,10 @@ int min_trans_num_dp(int n, std::vector<int>& dis) {
 void lab08() {
     int n;
 
-    // Ä¿µÄµØ¾àÀë
+    // ç›®çš„åœ°è·ç¦»
     std::cin >> n;
 
-    // Ã¿Õ¾×îÔ¶´«Êä¾àÀë
+    // æ¯ç«™æœ€è¿œä¼ è¾“è·ç¦»
     std::vector<int> dis(n);
     for (int i = 0; i < n; i++) {
         std::cin >> dis[i];

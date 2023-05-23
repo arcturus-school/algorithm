@@ -1,12 +1,12 @@
-#include "lab.h"
+ï»¿#include "lab.h"
 
 int min_matrix_multiple_num(int n, std::vector<int>& a) {
-    // ±£´æ×îÉÙÏà³Ë´ÎÊı
+    // ä¿å­˜æœ€å°‘ç›¸ä¹˜æ¬¡æ•°
     std::vector<std::vector<int>> m(n, std::vector<int>(n, 0));
 
-    for (int l = 2; l < n + 1; l++) { // µ±Ç°¾ØÕó¸öÊı
+    for (int l = 2; l < n + 1; l++) { // å½“å‰çŸ©é˜µä¸ªæ•°
         for (int i = 0; i < n - l + 1; i++) {
-            // ¾ØÕóÆğÊ¼ i, ½áÊø j
+            // çŸ©é˜µèµ·å§‹ i, ç»“æŸ j
             int j = i + l - 1;
 
             m[i][j] = std::numeric_limits<int>::max();
@@ -15,14 +15,14 @@ int min_matrix_multiple_num(int n, std::vector<int>& a) {
                 int q = m[i][k] + m[k + 1][j] + a[i] * a[k + 1] * a[j + 1];
 
                 if (q < m[i][j]) {
-                    // ´æÔÚ¸üĞ¡µÄ³Ë»ı´ÎÊı, (Ai, ..., Ak) * (A_{k+1}, ..., Aj)
+                    // å­˜åœ¨æ›´å°çš„ä¹˜ç§¯æ¬¡æ•°, (Ai, ..., Ak) * (A_{k+1}, ..., Aj)
                     m[i][j] = q;
                 }
             }
         }
     }
 
-    // ·µ»Ø A0 ~ A_{n-1} Ö®¼ä×îÉÙ³Ë»ı´ÎÊı
+    // è¿”å› A0 ~ A_{n-1} ä¹‹é—´æœ€å°‘ä¹˜ç§¯æ¬¡æ•°
     return m[0][n - 1];
 }
 

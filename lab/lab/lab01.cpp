@@ -1,4 +1,4 @@
-#include "lab.h"
+﻿#include "lab.h"
 
 int partition(std::vector<int>& array, int left, int right) {
     int begin = left, end = right;

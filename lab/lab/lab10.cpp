@@ -1,23 +1,23 @@
-#include "lab.h"
+ï»¿#include "lab.h"
 
 bool compare(std::pair<int, int>& p1, std::pair<int, int>& p2) {
     return p1.first < p2.first;
 }
 
 int calc_min_schedule(std::vector<int>& T, std::vector<int>& D) {
-    // Í¬Ê±¼ÇÂ¼Ë÷Òı
+    // åŒæ—¶è®°å½•ç´¢å¼•
     std::vector<std::pair<int, int>> D_plus;
 
     for (int i = 0; i < D.size(); i++) {
         D_plus.push_back(std::make_pair(D[i], i));
     }
 
-    // ¶ÔÍê³ÉÊ±¼ä½øĞĞÅÅĞò
+    // å¯¹å®Œæˆæ—¶é—´è¿›è¡Œæ’åº
     std::sort(D_plus.begin(), D_plus.end(), compare);
 
-    int max = 0, s /* µ±Ç°·şÎñ¿ªÊ¼Ê±¼ä */ = 0, dt /* ÑÓ³Ù */;
+    int max = 0, s /* å½“å‰æœåŠ¡å¼€å§‹æ—¶é—´ */ = 0, dt /* å»¶è¿Ÿ */;
 
-    // ¼ÆËã¸÷·şÎñÑÓ³Ù
+    // è®¡ç®—å„æœåŠ¡å»¶è¿Ÿ
     for (int i = 0; i < D_plus.size(); i++) {
         dt = s + T[D_plus[i].second] - D_plus[i].first;
 

@@ -1,6 +1,6 @@
-#include "lab.h"
+ï»¿#include "lab.h"
 
-// c ÓïÑÔ°æ
+// c è¯­è¨€ç‰ˆ
 //#include <stdio.h>
 //#include <stdlib.h>
 //
@@ -72,7 +72,7 @@ void lab09() {
 
     int temp;
 
-    // oj ²»ÄÜÕâÑùÐ´, ²»ÖªÎªºÎ...
+    // oj ä¸èƒ½è¿™æ ·å†™, ä¸çŸ¥ä¸ºä½•...
     //while (true) {
     //    std::cin >> temp;
     //    heights.push_back(temp);

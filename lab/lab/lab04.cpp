@@ -1,4 +1,4 @@
-#include "lab.h"
+ï»¿#include "lab.h"
 
 class Point {
 public:
@@ -7,12 +7,12 @@ public:
 
     Point(int x, int y) : x(x), y(y) {};
 
-    // ÒÔ×ø±ê x ÉıĞòÅÅÁĞ
+    // ä»¥åæ ‡ x å‡åºæ’åˆ—
     static bool compareX(Point& a, Point& b) {
         return a.x < b.x;
     }
 
-    // ÒÔ×ø±ê y ÉıĞòÅÅÁĞ
+    // ä»¥åæ ‡ y å‡åºæ’åˆ—
     static bool compareY(Point& a, Point& b) {
         return a.y < b.y;
     }
@@ -29,13 +29,13 @@ public:
         return calc_distance(a, b);
     }
 
-    // ¼ÆËãÁ½µãÖ®¼ä¾àÀë
+    // è®¡ç®—ä¸¤ç‚¹ä¹‹é—´è·ç¦»
     static double calc_distance(Point& a, Point& b) {
         return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));
     }
 };
 
-// ¼ÆËãÈıµãÖ®¼ä×î¶Ì¾àÀë
+// è®¡ç®—ä¸‰ç‚¹ä¹‹é—´æœ€çŸ­è·ç¦»
 Pair min_distance_3points(Point& a, Point& b, Point& c) {
     double d1 = Pair::calc_distance(a, b);
     double d2 = Pair::calc_distance(a, c);
@@ -59,19 +59,19 @@ Pair min_distance_3points(Point& a, Point& b, Point& c) {
     }
 }
 
-// ×î½Ó½üµã¶Ô
+// æœ€æ¥è¿‘ç‚¹å¯¹
 Pair closet_pair(std::vector<Point>& p) {
-    // Á½µãµÄÇé¿ö
+    // ä¸¤ç‚¹çš„æƒ…å†µ
     if (p.size() == 2) {
         return Pair(p[0], p[1]);
     }
     
-    // ÈıµãµÄÇé¿ö
+    // ä¸‰ç‚¹çš„æƒ…å†µ
     if (p.size() == 3) {
         return min_distance_3points(p[0], p[1], p[2]);
     }
 
-    // ÒÔ´¹Ö±Ïß l Îª½ç½«µã¼¯·Ö³É×óÓÒÁ½±ß(¸ù¾İµã¼¯Ë®Æ½ÖĞµãÀ´»®·Ö)
+    // ä»¥å‚ç›´çº¿ l ä¸ºç•Œå°†ç‚¹é›†åˆ†æˆå·¦å³ä¸¤è¾¹(æ ¹æ®ç‚¹é›†æ°´å¹³ä¸­ç‚¹æ¥åˆ’åˆ†)
     std::vector<Point> pls, prs;
 
     int mid = p.size() / 2;
@@ -87,14 +87,14 @@ Pair closet_pair(std::vector<Point>& p) {
     Pair pl = closet_pair(pls);
     Pair pr = closet_pair(prs);
 
-    // ×óÓÒÁ½±ß×îÁÚ½üµã¾àÀë
+    // å·¦å³ä¸¤è¾¹æœ€é‚»è¿‘ç‚¹è·ç¦»
     double dl = pl.get_distance();
     double dr = pr.get_distance();
 
     double best = dl < dr ? dl : dr;
-    Pair res = dl < dr ? pl : pr; // µ±Ç°×óÓÒÁ½²à¾àÀë×î½üµÄµã
+    Pair res = dl < dr ? pl : pr; // å½“å‰å·¦å³ä¸¤ä¾§è·ç¦»æœ€è¿‘çš„ç‚¹
 
-    // ÊÕ¼¯¾àÀë´¹Ö±Ïß l Ë®Æ½¾àÀëĞ¡ÓÚ best µÄµã
+    // æ”¶é›†è·ç¦»å‚ç›´çº¿ l æ°´å¹³è·ç¦»å°äº best çš„ç‚¹
     std::vector<Point> left, right;
 
     for (int i = 0; i < pls.size(); i++) {
@@ -109,11 +109,11 @@ Pair closet_pair(std::vector<Point>& p) {
         }
     }
 
-    // ±éÀú×ó±ßµÄµã, ²é¿´ÓĞÃ»ÓĞ¾àÀëÓÒ±ß best ÄÚµÄµã
+    // éå†å·¦è¾¹çš„ç‚¹, æŸ¥çœ‹æœ‰æ²¡æœ‰è·ç¦»å³è¾¹ best å†…çš„ç‚¹
     for (int i = 0; i < left.size(); i++) {
         for (int j = 0; j < right.size(); j++) {
             if (right[j].y < left[i].y + best && right[j].y > left[i].y - best) {
-                // ½ö¼ÆËãÓÒ²àµãÔÚ [y - d, y + d] ·¶Î§ÄÚµÄ
+                // ä»…è®¡ç®—å³ä¾§ç‚¹åœ¨ [y - d, y + d] èŒƒå›´å†…çš„
                 double d = Pair::calc_distance(left[i], right[j]);
                 if (d < best) {
                     best = d;
@@ -127,7 +127,7 @@ Pair closet_pair(std::vector<Point>& p) {
 }
 
 Pair pair(std::vector<Point>& p) {
-    // ÒÔ x ×ø±êÅÅĞò
+    // ä»¥ x åæ ‡æ’åº
     std::sort(p.begin(), p.end(), Point::compareX);
 
     return closet_pair(p);
