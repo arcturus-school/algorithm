@@ -30,6 +30,10 @@
 
 - [lab10](./lab/lab/lab10.cpp) 最小延迟调度
 
+- [lab11](./lab/lab/lab11.cpp) 用最少数量的箭引爆气球
+
+- [lab12](./lab/lab/lab12.cpp) 最小报告厅数(调度问题)
+
 ## 学习笔记
 
 点击查看[掘金专栏](https://juejin.cn/column/7208817904547446840)
