@@ -1,4 +1,4 @@
-#include "lab.h"
+ï»¿#include "lab.h"
 
 class Lecture {
 public:
@@ -17,23 +17,23 @@ int min_num_lecture_halls(std::vector<Lecture>& le) {
 
     std::vector<int> halls;
 
-    // ÖÁÉÙÓĞÒ»¼ä±¨¸æÌü
+    // è‡³å°‘æœ‰ä¸€é—´æŠ¥å‘Šå…
     halls.push_back(le[0].end);
 
     int idx;
 
     for (int i = 1; i < le.size(); i++) {
-        // ÕÒµ½×îÔç½áÊøµÄ½²×ù
+        // æ‰¾åˆ°æœ€æ—©ç»“æŸçš„è®²åº§
         auto end = std::min_element(halls.begin(), halls.end());
 
         if (le[i].start >= *end) {
-            // Èç¹ûÄÜ¿ª½²×ù¾Í½«½áÊøÊ±¼ä¸üĞÂ
+            // å¦‚æœèƒ½å¼€è®²åº§å°±å°†ç»“æŸæ—¶é—´æ›´æ–°
             idx = std::distance(halls.begin(), end);
 
             halls[idx] = le[i].end;
         }
         else {
-            // ²»ÄÜ¿ª½²×ù¾Í¶à¼ÓÒ»¼ä±¨¸æÌü
+            // ä¸èƒ½å¼€è®²åº§å°±å¤šåŠ ä¸€é—´æŠ¥å‘Šå…
             halls.push_back(le[i].end);
         }
     }
@@ -41,7 +41,7 @@ int min_num_lecture_halls(std::vector<Lecture>& le) {
     return halls.size();
 }
 
-// Ê¹ÓÃÓÅÏÈ¶ÓÁĞÓÅ»¯
+// ä½¿ç”¨ä¼˜å…ˆé˜Ÿåˆ—ä¼˜åŒ–
 int min_num_lecture_halls_priority_queue(std::vector<Lecture>& le) {
     if (le.size() == 0) return 0;
 
@@ -51,19 +51,19 @@ int min_num_lecture_halls_priority_queue(std::vector<Lecture>& le) {
 
     std::sort(le.begin(), le.end(), compare);
 
-    // Ğ¡¶Ñ
+    // å°å †
     std::priority_queue<int, std::vector<int>, std::greater<int>> halls;
 
-    // ÖÁÉÙÓĞÒ»¼ä±¨¸æÌü
+    // è‡³å°‘æœ‰ä¸€é—´æŠ¥å‘Šå…
     halls.push(le[0].end);
 
     for (int i = 1; i < le.size(); i++) {
         if (le[i].start >= halls.top()) {
-            // Èç¹ûÄÜ¿ª½²×ùÔòµ¯³öÒ»¸ö±¨¸æÌü
+            // å¦‚æœèƒ½å¼€è®²åº§åˆ™å¼¹å‡ºä¸€ä¸ªæŠ¥å‘Šå…
             halls.pop();
         }
 
-        // ÎŞÂÛÈçºÎ¶¼¼ÓÒ»¼ä±¨¸æÌü
+        // æ— è®ºå¦‚ä½•éƒ½åŠ ä¸€é—´æŠ¥å‘Šå…
         halls.push(le[i].end);
     }
 
