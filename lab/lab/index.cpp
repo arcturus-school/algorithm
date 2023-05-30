@@ -42,6 +42,10 @@ int main() {
     test.add("lab10", lab10);
     test.add("lab11", lab11);
     test.add("lab12", lab12);
+    test.add("lab13", lab13);
+    test.add("lab14", lab14);
+    test.add("lab15", lab15);
+    test.add("lab16", lab16);
 
     // 设置当前需要执行的方法
     test.set("lab12");

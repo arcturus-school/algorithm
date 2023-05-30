@@ -37,3 +37,15 @@ void lab11();
 
 // 间隔分割
 void lab12();
+
+// 括号生成问题
+void lab13();
+
+// N 皇后问题
+void lab14();
+
+// 所有可能的路径
+void lab15();
+
+// 电话号码的字母组合
+void lab16();

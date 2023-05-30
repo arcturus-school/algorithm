@@ -32,6 +32,10 @@
     <ClCompile Include="lab10.cpp" />
     <ClCompile Include="lab11.cpp" />
     <ClCompile Include="lab12.cpp" />
+    <ClCompile Include="lab13.cpp" />
+    <ClCompile Include="lab14.cpp" />
+    <ClCompile Include="lab15.cpp" />
+    <ClCompile Include="lab16.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lab.h" />

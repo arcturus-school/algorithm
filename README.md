@@ -34,6 +34,16 @@
 
 - [lab12](./lab/lab/lab12.cpp) 最小报告厅数(调度问题)
 
+### 回溯问题
+
+- [lab13](./lab/lab/lab13.cpp) 括号生成问题
+
+- [lab14](./lab/lab/lab14.cpp) N 皇后问题
+
+- [lab15](./lab/lab/lab15.cpp) 所有可能的路径
+
+- [lab16](./lab/lab/lab16.cpp) 电话号码的字母组合
+
 ## 学习笔记
 
 点击查看[掘金专栏](https://juejin.cn/column/7208817904547446840)
