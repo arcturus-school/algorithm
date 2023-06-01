@@ -48,7 +48,7 @@ int main() {
     test.add("lab16", lab16);
 
     // 设置当前需要执行的方法
-    test.set("lab12");
+    test.set("lab16");
     
     test.operation();
 
